@@ -1,0 +1,11 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sAllowedRegs
+metadata:
+  name: allowed-repos
+  match:
+    kinds:
+      - apiGroups: [""]
+        kinds: ["Pod"]
+  parameters:
+    regs:
+      - "idock.daumkakao.io/"

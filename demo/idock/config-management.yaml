@@ -1,0 +1,13 @@
+apiVersion: configmanagement.gke.io/v1
+kind: ConfigManagement
+metadata:
+  name: config-management
+  namespace: config-management-system
+spec:
+  # clusterName is required and must be unique among all managed clusters
+  clusterName: gatekeeper-sample
+  # Set to true to install and enable Policy Controller
+  policyController:
+    enabled: true
+    # Uncomment to prevent the template library from being installed
+    # templateLibraryInstalled: false

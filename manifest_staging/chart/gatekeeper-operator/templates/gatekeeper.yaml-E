@@ -515,7 +515,7 @@ spec:
         - mountPath: /certs
           name: cert
           readOnly: true
-      nodeSelector: n{{ toYaml .Values.nodeSelector | indent 8 }}n      affinity:n{{ toYaml .Values.affinity | indent 8 }}n      tolerations:n{{ toYaml .Values.tolerations | indent 8 }}
+      nodeSelector: HELMSUBST_DEPLOYMENT_POD_SCHEDULING
       serviceAccountName: gatekeeper-admin
       terminationGracePeriodSeconds: 60
       volumes:

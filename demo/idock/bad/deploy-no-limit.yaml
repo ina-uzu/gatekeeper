@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: idock-bad-test-no-limits
+spec:
+  containers:
+    - name: opa
+      image: idock.daumkakao.io/uzu_ina/mini-git-m2
+      args:
+        - "run"
+        - "--server"
+        - "--addr=localhost:8080"
